@@ -6,6 +6,7 @@
     <title>UsabilityHub | User Research & Usability Testing </title>
     <link rel="shortcut icon" href="UsabilityHub_Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQueries.css">
 
 </head>
 <body>
@@ -25,7 +26,7 @@
                 <img src="./assets/asset 0.png" alt="company-logo">
             </a>
             
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links" >
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Product</a></li>
                     <li><a href="#" class="hover-link">Customers</a></li>
@@ -35,6 +36,9 @@
                     <li><a href="#" class="hover-link primary-button">Sign up</a></li>
                 </ul>
             </div>
+            <a title="hamburger menu" href="#" class=" hover-link nav-toggle" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
 
@@ -170,7 +174,7 @@
                 </p>
             </div>
         </div>
-        <div class="container flex big-feature-container">
+        <div class="container flex big-feature-container middle">
             
             <div class="feature-desc flex">
                 <h4>
@@ -206,45 +210,39 @@
     </div>
 
     <!-- examples  -->
-    <div class="examples">
-        <div class="container examples-section ">
-            <h2>One platform, endless possibilities</h2>
-            <a href="#" class="secondary-button">See more examples <i class="fa-solid fa-right-long"></i> </a>
-        </div>
-
-        <div class=" container example-below flex">
-            <div class="example1 flex example-card">
-                <h3>
-                    Can users complete a task in my software interface?
-                </h3>
+    <section class="examples-section">
+        <div class="container">
+            <div class="examples-header flex">
+                <h2 class="examples-heading-text">One platform, endless possibilities</h2>
+                <a href="#" class="secondary-button">See more examples <i class="fa-solid fa-right-long"></i></a>
             </div>
-            
-            <div class="example2 flex example-card">
-                <h3>
-                    Can users find important pages on my website?
-                </h3>
-            </div>
-            <div class="example3 flex example-card">
-                <h3>
-                    Is my website's intended audience clear?
-                </h3>
-            </div>
-            <div class="example4 flex example-card">
-                <h3>
-                    Do visitors understand what a page is about? 
-                </h3>
+            <div class="examples-area flex">
+                <a href="#" class="examples-card">
+                    <h3 class="card-text">Can user complete a task in my software interface?</h3>
+                </a>
+                <a class="examples-card" href="#" >
+                    <h3 class="card-text">Can users find important pages on my website?</h3>
+                </a>
+                <a class="examples-card" href="#">
+                    <h3 class="card-text">Is my website's intended audience clear? </h3>
+                </a>
+                <a class="examples-card" href="#">
+                    <h3 class="card-text">Do visitors understand what a page is about?</h3>
+                </a>
             </div>
         </div>
-    
-    </div>
+    </section>
 
     <!-- cta  -->
-    <div class="cta flex">
-    <h2>Start testing today</h2>
-    <p>Take the guesswork out of design decisions</p>
-    <a href="#" class="primary-button">Get Started</a>    
-    </div>
+    <section class="cta-section">
+        <div class="container flex cta-section-container">
+            <h2>Start testing today</h2>
+            <p>Take the guesswork out of design decisions</p>
+            <a href="#" class="primary-button">Get Started</a>
+        </div>
+    </section>
 
+    <!-- footer  -->
     <footer class="footer-section">
         <div class="container flex footerContent">
             <a href="#" class="footer-img">
@@ -286,17 +284,30 @@
         </div>
     </footer>
 
+    <!-- sub-footer  -->
     <div class="subFooter">
         <div class="container flex subFooter-desc">
             <h4>Privacy Policy</h4>
             <h4>Terms & Condition</h4>
             <h4>Security Information</h4>
-            <img src="./assets/asset 24.png" alt="facebook">
-            <img src="./assets/asset 25.png" alt="twitter">
+            <div class="subFooter-img flex">
+                <img src="./assets/asset 24.png" alt="facebook">
+                <img src="./assets/asset 25.png" alt="twitter">
+            </div>
+
         </div>
     </div>
 
 
     <script src="https://kit.fontawesome.com/91265c310e.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleButton = document.getElementById("nav-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        toggleButton.addEventListener('click',()=>{
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
